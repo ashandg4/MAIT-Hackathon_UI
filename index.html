@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smart Door Login</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Login Page -->
+        <div id="login-page" class="container">
+            <h2>Login</h2>
+            <form onsubmit="return handleLogin()">
+                <label for="userid">User ID:</label>
+                <input type="text" id="userid" required />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required />
+
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error" class="error-message"></p>
+        </div>
+
+        <!-- Home Page -->
+        <div id="home-page" class="container" style="display: none">
+            <h2>Welcome to the Smart Door System</h2>
+            <div class="status-section">
+                <span id="door-status">Door Status: Locked</span>
+                <button onclick="toggleDoorStatus()">Unlock Door</button>
+            </div>
+
+            <h3>Room Owner's Picture</h3>
+            <img src="room_owner.jpg" alt="Room Owner" class="owner-image" />
+
+            <h3>Visitor Log</h3>
+            <div id="visitor-log">
+                <!-- Visitor entries will be populated here -->
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
